@@ -1,10 +1,14 @@
 import express from "express";
+import userRouter from "./user.js";
+import loginRouter from "./login.js";
 
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function (req, res, next) {
-    res.send('Hello World!');
+    res.send("we are here");
 });
+
+router.use('/login', loginRouter);
+router.use('/users', userRouter);
 
 export default router;
