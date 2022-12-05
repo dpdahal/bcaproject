@@ -2,9 +2,8 @@ import AdminHeaderComponents from "../../layouts/AdminHeaderComponents";
 import AdminAsideComponents from "../../layouts/AdminAsideComponents";
 import AdminFooterComponents from "../../layouts/AdminFooterComponents";
 
-function DashboardComponents(){
-
-    return(
+function DashboardComponents() {
+    return (
         <div>
             <AdminHeaderComponents/>
             <AdminAsideComponents/>
@@ -20,9 +19,9 @@ function DashboardComponents(){
                 </div>
                 <section className="section dashboard">
                     <div className="row">
-                       <div className="col-md-12">
-                           <h1>Dashboard page</h1>
-                       </div>
+                        <div className="col-md-12">
+                            <h1>Dashboard page</h1>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -32,4 +31,5 @@ function DashboardComponents(){
     )
 
 }
+
 export default DashboardComponents;

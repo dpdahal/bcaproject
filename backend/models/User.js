@@ -61,6 +61,7 @@ UserSchema.methods.toJSON = function () {
     } else {
         user.image = process.env.BASE_URL + "/icons/not_found.jpg";
     }
+    delete user.password;
     return user;
 }
 
@@ -75,12 +76,6 @@ UserSchema.methods.generateToken = function () {
         expiresIn: process.env.JWT_EXPIRES_IN
     });
     return token;
-}
-// remove password from response
-UserSchema.methods.toJSON = function () {
-    const user = this.toObject();
-    delete user.password;
-    return user;
 }
 
 export default mongoose.model("User", UserSchema);
